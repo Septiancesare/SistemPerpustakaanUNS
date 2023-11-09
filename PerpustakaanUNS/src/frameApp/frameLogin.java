@@ -58,6 +58,7 @@ public class frameLogin extends javax.swing.JFrame {
 
         btnLogin.setBackground(new java.awt.Color(125, 39, 34));
         btnLogin.setFont(new java.awt.Font("Century", 1, 24)); // NOI18N
+        btnLogin.setForeground(new java.awt.Color(255, 204, 51));
         btnLogin.setText("M A S U K");
         btnLogin.setBorder(null);
         btnLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +66,7 @@ public class frameLogin extends javax.swing.JFrame {
                 btnLoginActionPerformed(evt);
             }
         });
-        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 570, 600, 60));
+        getContentPane().add(btnLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 560, 600, 70));
 
         inputUsername.setBackground(new java.awt.Color(222, 217, 186));
         inputUsername.setFont(new java.awt.Font("Century", 0, 24)); // NOI18N

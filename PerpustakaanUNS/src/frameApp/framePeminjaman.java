@@ -6,14 +6,14 @@ package frameApp;
 
 /**
  *
- * @author Septiancesare
+ * @author Asus
  */
-public class framePengembalian extends javax.swing.JFrame {
+public class framePeminjaman extends javax.swing.JFrame {
 
     /**
-     * Creates new form framePengembalian
+     * Creates new form framePeminjaman
      */
-    public framePengembalian() {
+    public framePeminjaman() {
         initComponents();
     }
 
@@ -26,72 +26,103 @@ public class framePengembalian extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        inputNoPinjam1 = new javax.swing.JTextField();
         inputIDPetugas = new javax.swing.JTextField();
         inputIDAnggota = new javax.swing.JTextField();
         inputNamaAnggota = new javax.swing.JTextField();
         inputIDBuku = new javax.swing.JTextField();
         inputJudulBuku = new javax.swing.JTextField();
-        inputNoUrut = new javax.swing.JTextField();
+        inputTanggalPinjam = new javax.swing.JTextField();
+        inputBatasPengembalian = new javax.swing.JTextField();
         btnTambah = new javax.swing.JButton();
         btnSimpan = new javax.swing.JButton();
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnBatal = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        TabelPengembalian = new javax.swing.JTable();
-        bgPengembalian = new javax.swing.JLabel();
+        bgPeminjaman = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        inputNoPinjam1.setBackground(new java.awt.Color(222, 217, 186));
+        inputNoPinjam1.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
+        inputNoPinjam1.setBorder(null);
+        inputNoPinjam1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputNoPinjam1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputNoPinjam1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 390, 30));
 
         inputIDPetugas.setBackground(new java.awt.Color(222, 217, 186));
-        inputIDPetugas.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputIDPetugas.setForeground(new java.awt.Color(51, 0, 0));
+        inputIDPetugas.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputIDPetugas.setBorder(null);
-        jPanel1.add(inputIDPetugas, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 400, 30));
+        inputIDPetugas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDPetugasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputIDPetugas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 240, 390, 30));
 
         inputIDAnggota.setBackground(new java.awt.Color(222, 217, 186));
-        inputIDAnggota.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputIDAnggota.setForeground(new java.awt.Color(51, 0, 0));
+        inputIDAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputIDAnggota.setBorder(null);
-        jPanel1.add(inputIDAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 400, 30));
+        inputIDAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDAnggotaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputIDAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, 390, 30));
 
         inputNamaAnggota.setBackground(new java.awt.Color(222, 217, 186));
-        inputNamaAnggota.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputNamaAnggota.setForeground(new java.awt.Color(51, 0, 0));
+        inputNamaAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputNamaAnggota.setBorder(null);
-        jPanel1.add(inputNamaAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 380, 400, 30));
+        inputNamaAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputNamaAnggotaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputNamaAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 390, 30));
 
         inputIDBuku.setBackground(new java.awt.Color(222, 217, 186));
-        inputIDBuku.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputIDBuku.setForeground(new java.awt.Color(51, 0, 0));
+        inputIDBuku.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputIDBuku.setBorder(null);
-        jPanel1.add(inputIDBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 400, 30));
+        inputIDBuku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDBukuActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputIDBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 390, 30));
 
         inputJudulBuku.setBackground(new java.awt.Color(222, 217, 186));
-        inputJudulBuku.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputJudulBuku.setForeground(new java.awt.Color(51, 0, 0));
+        inputJudulBuku.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputJudulBuku.setBorder(null);
         inputJudulBuku.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 inputJudulBukuActionPerformed(evt);
             }
         });
-        jPanel1.add(inputJudulBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 400, 30));
+        getContentPane().add(inputJudulBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 240, 390, 30));
 
-        inputNoUrut.setBackground(new java.awt.Color(222, 217, 186));
-        inputNoUrut.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
-        inputNoUrut.setForeground(new java.awt.Color(51, 0, 0));
-        inputNoUrut.setBorder(null);
-        inputNoUrut.addActionListener(new java.awt.event.ActionListener() {
+        inputTanggalPinjam.setBackground(new java.awt.Color(222, 217, 186));
+        inputTanggalPinjam.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
+        inputTanggalPinjam.setBorder(null);
+        inputTanggalPinjam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputNoUrutActionPerformed(evt);
+                inputTanggalPinjamActionPerformed(evt);
             }
         });
-        jPanel1.add(inputNoUrut, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 400, 30));
+        getContentPane().add(inputTanggalPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 390, 30));
+
+        inputBatasPengembalian.setBackground(new java.awt.Color(222, 217, 186));
+        inputBatasPengembalian.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
+        inputBatasPengembalian.setBorder(null);
+        inputBatasPengembalian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputBatasPengembalianActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputBatasPengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 380, 390, 30));
 
         btnTambah.setBackground(new java.awt.Color(125, 39, 34));
         btnTambah.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
@@ -103,7 +134,7 @@ public class framePengembalian extends javax.swing.JFrame {
                 btnTambahActionPerformed(evt);
             }
         });
-        jPanel1.add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 110, 220, 50));
+        getContentPane().add(btnTambah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 110, 220, 50));
 
         btnSimpan.setBackground(new java.awt.Color(125, 39, 34));
         btnSimpan.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
@@ -115,7 +146,7 @@ public class framePengembalian extends javax.swing.JFrame {
                 btnSimpanActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 190, 220, 50));
+        getContentPane().add(btnSimpan, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 190, 220, 50));
 
         btnUbah.setBackground(new java.awt.Color(125, 39, 34));
         btnUbah.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
@@ -127,7 +158,7 @@ public class framePengembalian extends javax.swing.JFrame {
                 btnUbahActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUbah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 260, 220, 50));
+        getContentPane().add(btnUbah, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 260, 220, 50));
 
         btnHapus.setBackground(new java.awt.Color(125, 39, 34));
         btnHapus.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
@@ -139,7 +170,7 @@ public class framePengembalian extends javax.swing.JFrame {
                 btnHapusActionPerformed(evt);
             }
         });
-        jPanel1.add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 330, 220, 50));
+        getContentPane().add(btnHapus, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 330, 220, 50));
 
         btnBatal.setBackground(new java.awt.Color(125, 39, 34));
         btnBatal.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
@@ -151,92 +182,50 @@ public class framePengembalian extends javax.swing.JFrame {
                 btnBatalActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 400, 220, 50));
+        getContentPane().add(btnBatal, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 400, 220, 50));
 
-        TabelPengembalian.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"PJ14251762", "PM73289732", "K3522077", "Septian Cesare Arden", "A328372837", "ADM8293822", "23/10/2023",  new Integer(5000), "Petir Menyambar"},
-                {"PJ23712873", "PM37162372", "K3526526", "Cesare Aja Ya", "D322982039", "ADM3494898", "26/12/2024",  new Integer(20000), "Orang Tersambar"},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null}
-            },
-            new String [] {
-                "ID Pinjam", "ID Kembali", "ID Anggota", "Nama Anggota", "ID Buku", "ID Petugas", "Tanggal Kembali", "Denda", "Judul Buku"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        TabelPengembalian.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                TabelPengembalianMouseClicked(evt);
-            }
-        });
-        jScrollPane1.setViewportView(TabelPengembalian);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 467, 1300, 270));
-
-        bgPengembalian.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui_componen/ui_dataPengembalian.png"))); // NOI18N
-        bgPengembalian.setText("jLabel1");
-        jPanel1.add(bgPengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, -1));
-
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1300, 730));
+        bgPeminjaman.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui_componen/uiPeminjaman.png"))); // NOI18N
+        getContentPane().add(bgPeminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void inputNoUrutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNoUrutActionPerformed
+    private void inputIDPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDPetugasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputNoUrutActionPerformed
+    }//GEN-LAST:event_inputIDPetugasActionPerformed
 
-    private void TabelPengembalianMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelPengembalianMouseClicked
+    private void inputNoPinjam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNoPinjam1ActionPerformed
         // TODO add your handling code here:
-        int row = TabelPengembalian.getSelectedRow();
-        
-//        if (row == -1){
-//            return;
-//        
-//        }
-        String idPinjam = (String) TabelPengembalian.getValueAt(row, 1);
-        inputNoUrut.setText(idPinjam);
-        
-        String idPetugas = (String) TabelPengembalian.getValueAt(row, 6);
-        inputIDPetugas.setText(idPetugas);
-        
-        String idAnggota = (String) TabelPengembalian.getValueAt(row, 3);
-        inputIDAnggota.setText(idAnggota);
-        
-        String namaAnggota = (String) TabelPengembalian.getValueAt(row, 4);
-        inputNamaAnggota.setText(namaAnggota);
-        
-        String idBuku = (String) TabelPengembalian.getValueAt(row, 5);
-        inputIDBuku.setText(idBuku);
-        
-        String judulBuku = (String) TabelPengembalian.getValueAt(row, 9);
-        inputJudulBuku.setText(judulBuku);
-        
-    }//GEN-LAST:event_TabelPengembalianMouseClicked
+    }//GEN-LAST:event_inputNoPinjam1ActionPerformed
+
+    private void inputIDAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputIDAnggotaActionPerformed
+
+    private void inputNamaAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNamaAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputNamaAnggotaActionPerformed
+
+    private void inputIDBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDBukuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputIDBukuActionPerformed
 
     private void inputJudulBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputJudulBukuActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_inputJudulBukuActionPerformed
 
+    private void inputTanggalPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTanggalPinjamActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputTanggalPinjamActionPerformed
+
+    private void inputBatasPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputBatasPengembalianActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputBatasPengembalianActionPerformed
+
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         // TODO add your handling code here:
+
+
     }//GEN-LAST:event_btnTambahActionPerformed
 
     private void btnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSimpanActionPerformed
@@ -272,39 +261,38 @@ public class framePengembalian extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(framePengembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(framePeminjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(framePengembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(framePeminjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(framePengembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(framePeminjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(framePengembalian.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(framePeminjaman.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new framePengembalian().setVisible(true);
+                new framePeminjaman().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TabelPengembalian;
-    private javax.swing.JLabel bgPengembalian;
+    private javax.swing.JLabel bgPeminjaman;
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnHapus;
     private javax.swing.JButton btnSimpan;
     private javax.swing.JButton btnTambah;
     private javax.swing.JButton btnUbah;
+    private javax.swing.JTextField inputBatasPengembalian;
     private javax.swing.JTextField inputIDAnggota;
     private javax.swing.JTextField inputIDBuku;
     private javax.swing.JTextField inputIDPetugas;
     private javax.swing.JTextField inputJudulBuku;
     private javax.swing.JTextField inputNamaAnggota;
-    private javax.swing.JTextField inputNoUrut;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField inputNoPinjam1;
+    private javax.swing.JTextField inputTanggalPinjam;
     // End of variables declaration//GEN-END:variables
 }

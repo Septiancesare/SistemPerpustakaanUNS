@@ -27,12 +27,12 @@ public class frameMenu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
+        btnDataAnggota = new javax.swing.JButton();
+        btnPeminjaman = new javax.swing.JButton();
+        btnPengembalian = new javax.swing.JButton();
+        btnDataAdmin = new javax.swing.JButton();
+        btnDataBuku = new javax.swing.JButton();
+        btnKeluar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -40,46 +40,56 @@ public class frameMenu extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton1.setBackground(new java.awt.Color(251, 205, 31));
-        jButton1.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(125, 39, 34));
-        jButton1.setText("DATA ANGGOTA");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 300, 180));
+        btnDataAnggota.setBackground(new java.awt.Color(251, 205, 31));
+        btnDataAnggota.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnDataAnggota.setForeground(new java.awt.Color(125, 39, 34));
+        btnDataAnggota.setText("DATA ANGGOTA");
+        jPanel1.add(btnDataAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 300, 180));
 
-        jButton2.setBackground(new java.awt.Color(251, 205, 31));
-        jButton2.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(125, 39, 34));
-        jButton2.setText("PEMINJAMAN BUKU");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnPeminjaman.setBackground(new java.awt.Color(251, 205, 31));
+        btnPeminjaman.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnPeminjaman.setForeground(new java.awt.Color(125, 39, 34));
+        btnPeminjaman.setText("PEMINJAMAN BUKU");
+        btnPeminjaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnPeminjamanActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 300, 180));
+        jPanel1.add(btnPeminjaman, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 190, 300, 180));
 
-        jButton3.setBackground(new java.awt.Color(251, 205, 31));
-        jButton3.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(125, 39, 34));
-        jButton3.setText("PENGEMBALIAN BUKU");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 193, 310, 170));
+        btnPengembalian.setBackground(new java.awt.Color(251, 205, 31));
+        btnPengembalian.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnPengembalian.setForeground(new java.awt.Color(125, 39, 34));
+        btnPengembalian.setText("PENGEMBALIAN BUKU");
+        btnPengembalian.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPengembalianActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPengembalian, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 193, 310, 170));
 
-        jButton4.setBackground(new java.awt.Color(251, 205, 31));
-        jButton4.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(125, 39, 34));
-        jButton4.setText("DATA ADMIN");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 300, 180));
+        btnDataAdmin.setBackground(new java.awt.Color(251, 205, 31));
+        btnDataAdmin.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnDataAdmin.setForeground(new java.awt.Color(125, 39, 34));
+        btnDataAdmin.setText("DATA ADMIN");
+        jPanel1.add(btnDataAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 300, 180));
 
-        jButton5.setBackground(new java.awt.Color(251, 205, 31));
-        jButton5.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(125, 39, 34));
-        jButton5.setText("DATA BUKU");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 300, 180));
+        btnDataBuku.setBackground(new java.awt.Color(251, 205, 31));
+        btnDataBuku.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnDataBuku.setForeground(new java.awt.Color(125, 39, 34));
+        btnDataBuku.setText("DATA BUKU");
+        jPanel1.add(btnDataBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 300, 180));
 
-        jButton6.setBackground(new java.awt.Color(251, 205, 31));
-        jButton6.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(125, 39, 34));
-        jButton6.setText("KELUAR");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, 310, 180));
+        btnKeluar.setBackground(new java.awt.Color(251, 205, 31));
+        btnKeluar.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
+        btnKeluar.setForeground(new java.awt.Color(125, 39, 34));
+        btnKeluar.setText("KELUAR");
+        btnKeluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKeluarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnKeluar, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 430, 310, 180));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ui_componen/uiMenu.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -101,9 +111,23 @@ public class frameMenu extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jLabel1CaretPositionChanged
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeminjamanActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_btnPeminjamanActionPerformed
+
+    private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
+        // TODO add your handling code here:
+        frameLogin login = new frameLogin();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnKeluarActionPerformed
+
+    private void btnPengembalianActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPengembalianActionPerformed
+        // TODO add your handling code here:
+        framePengembalian pengembalian = new framePengembalian();
+        pengembalian.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnPengembalianActionPerformed
 
     /**
      * @param args the command line arguments
@@ -141,12 +165,12 @@ public class frameMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
+    private javax.swing.JButton btnDataAdmin;
+    private javax.swing.JButton btnDataAnggota;
+    private javax.swing.JButton btnDataBuku;
+    private javax.swing.JButton btnKeluar;
+    private javax.swing.JButton btnPeminjaman;
+    private javax.swing.JButton btnPengembalian;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

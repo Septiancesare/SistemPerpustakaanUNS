@@ -198,6 +198,7 @@ public class framePengembalian extends javax.swing.JFrame {
         
         String judulBuku = (String) TabelPengembalian.getValueAt(row, 9);
         inputJudulBuku.setText(judulBuku);
+        
     }//GEN-LAST:event_TabelPengembalianMouseClicked
 
     private void inputJudulBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputJudulBukuActionPerformed

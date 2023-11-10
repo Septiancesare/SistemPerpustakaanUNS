@@ -63,42 +63,77 @@ public class frameAnggota extends javax.swing.JFrame {
         inputIDAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputIDAnggota.setForeground(new java.awt.Color(255, 204, 0));
         inputIDAnggota.setBorder(null);
+        inputIDAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDAnggotaActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputIDAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 162, 400, 30));
 
         inputNamaAnggota.setBackground(new java.awt.Color(222, 217, 186));
         inputNamaAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputNamaAnggota.setForeground(new java.awt.Color(255, 204, 0));
         inputNamaAnggota.setBorder(null);
+        inputNamaAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputNamaAnggotaActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputNamaAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 400, 30));
 
         inputNoHPAnggota.setBackground(new java.awt.Color(222, 217, 186));
         inputNoHPAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputNoHPAnggota.setForeground(new java.awt.Color(255, 204, 0));
         inputNoHPAnggota.setBorder(null);
+        inputNoHPAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputNoHPAnggotaActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputNoHPAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 400, 30));
 
         inputProdi.setBackground(new java.awt.Color(222, 217, 186));
         inputProdi.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputProdi.setForeground(new java.awt.Color(255, 204, 0));
         inputProdi.setBorder(null);
+        inputProdi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputProdiActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputProdi, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 382, 400, 30));
 
         inputFakultas.setBackground(new java.awt.Color(222, 217, 186));
         inputFakultas.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputFakultas.setForeground(new java.awt.Color(255, 204, 0));
         inputFakultas.setBorder(null);
+        inputFakultas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputFakultasActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputFakultas, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 162, 400, 30));
 
         inputAlamatAnggota.setBackground(new java.awt.Color(222, 217, 186));
         inputAlamatAnggota.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputAlamatAnggota.setForeground(new java.awt.Color(255, 204, 0));
         inputAlamatAnggota.setBorder(null);
-        getContentPane().add(inputAlamatAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 242, 400, 30));
+        inputAlamatAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputAlamatAnggotaActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputAlamatAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 400, 30));
 
         inputTahunMasuk.setBackground(new java.awt.Color(222, 217, 186));
         inputTahunMasuk.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputTahunMasuk.setForeground(new java.awt.Color(255, 204, 0));
         inputTahunMasuk.setBorder(null);
+        inputTahunMasuk.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputTahunMasukActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputTahunMasuk, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 312, 400, 30));
 
         btnTambah.setBackground(new java.awt.Color(125, 39, 34));
@@ -173,6 +208,11 @@ public class frameAnggota extends javax.swing.JFrame {
             }
         ));
         tabelAnggota.setSelectionForeground(new java.awt.Color(255, 204, 0));
+        tabelAnggota.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelAnggotaMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tabelAnggota);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 1300, 430));
@@ -198,6 +238,65 @@ public class frameAnggota extends javax.swing.JFrame {
     private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBatalActionPerformed
+
+    private void inputIDAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputIDAnggotaActionPerformed
+
+    private void inputNamaAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNamaAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputNamaAnggotaActionPerformed
+
+    private void inputNoHPAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNoHPAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputNoHPAnggotaActionPerformed
+
+    private void inputProdiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputProdiActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputProdiActionPerformed
+
+    private void inputFakultasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputFakultasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputFakultasActionPerformed
+
+    private void inputAlamatAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputAlamatAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputAlamatAnggotaActionPerformed
+
+    private void inputTahunMasukActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTahunMasukActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputTahunMasukActionPerformed
+
+    private void tabelAnggotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelAnggotaMouseClicked
+        // TODO add your handling code here:
+         // TODO add your handling code here:
+        int row = tabelAnggota.getSelectedRow();
+        
+//        if (row == -1){
+//            return;
+//        
+//        }
+        String idAnggota = (String) tabelAnggota.getValueAt(row, 1);
+        inputIDAnggota.setText(idAnggota);
+        
+        String namaAnggota = (String) tabelAnggota.getValueAt(row, 2);
+        inputNamaAnggota.setText(namaAnggota);
+        
+        String noHPAnggota = (String) tabelAnggota.getValueAt(row, 3);
+        inputNoHPAnggota.setText(noHPAnggota);
+        
+        String prodi = (String) tabelAnggota.getValueAt(row, 4);
+        inputProdi.setText(prodi);
+        
+        String fakultas = (String) tabelAnggota.getValueAt(row, 5);
+        inputFakultas.setText(fakultas);
+        
+        String alamatAnggota = (String) tabelAnggota.getValueAt(row, 6);
+        inputAlamatAnggota.setText(alamatAnggota);
+        
+        String tahunMasuk = (String) tabelAnggota.getValueAt(row, 7);
+        inputTahunMasuk.setText(tahunMasuk);
+    }//GEN-LAST:event_tabelAnggotaMouseClicked
 
     /**
      * @param args the command line arguments

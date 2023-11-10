@@ -57,6 +57,11 @@ public class framePengembalian extends javax.swing.JFrame {
         inputIDAnggota.setFont(new java.awt.Font("Century", 0, 18)); // NOI18N
         inputIDAnggota.setForeground(new java.awt.Color(51, 0, 0));
         inputIDAnggota.setBorder(null);
+        inputIDAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDAnggotaActionPerformed(evt);
+            }
+        });
         jPanel1.add(inputIDAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 400, 30));
 
         inputNamaAnggota.setBackground(new java.awt.Color(222, 217, 186));
@@ -254,6 +259,10 @@ public class framePengembalian extends javax.swing.JFrame {
     private void btnBatalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBatalActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBatalActionPerformed
+
+    private void inputIDAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDAnggotaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputIDAnggotaActionPerformed
 
     /**
      * @param args the command line arguments

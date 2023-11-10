@@ -26,6 +26,8 @@ public class frameDataAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TabelDataAdmin = new javax.swing.JTable();
         inputIDPetugas = new javax.swing.JTextField();
         inputNamaPetugas = new javax.swing.JTextField();
         inputPassword = new javax.swing.JTextField();
@@ -40,6 +42,41 @@ public class frameDataAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        TabelDataAdmin.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "ID Petugas", "Nama Petugas", "Password", "Nomor HP", "Alamat Rumah "
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        TabelDataAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelDataAdminMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(TabelDataAdmin);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 467, 1300, 270));
 
         inputIDPetugas.setBackground(new java.awt.Color(222, 217, 186));
         inputIDPetugas.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
@@ -198,6 +235,30 @@ public class frameDataAdmin extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputPasswordActionPerformed
 
+    private void TabelDataAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelDataAdminMouseClicked
+        // TODO add your handling code here:
+        int row = TabelDataAdmin.getSelectedRow();
+
+        //        if (row == -1){
+            //            return;
+            //
+            //        }
+        String idPetugas = (String) TabelDataAdmin.getValueAt(row, 1);
+        inputIDPetugas.setText(idPetugas);
+
+        String namaPetugas = (String) TabelDataAdmin.getValueAt(row, 3);
+        inputNamaPetugas.setText(namaPetugas);
+
+        String password = (String) TabelDataAdmin.getValueAt(row, 4);
+        inputPassword.setText(password);
+
+        String nomorHP = (String) TabelDataAdmin.getValueAt(row, 5);
+        inputNoHP.setText(nomorHP);
+
+        String alamatRumah = (String) TabelDataAdmin.getValueAt(row, 9);
+        inputAlamatRumah.setText(alamatRumah);
+    }//GEN-LAST:event_TabelDataAdminMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -234,6 +295,7 @@ public class frameDataAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TabelDataAdmin;
     private javax.swing.JLabel bgDataAdmin;
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnHapus;
@@ -245,5 +307,6 @@ public class frameDataAdmin extends javax.swing.JFrame {
     private javax.swing.JTextField inputNamaPetugas;
     private javax.swing.JTextField inputNoHP;
     private javax.swing.JTextField inputPassword;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

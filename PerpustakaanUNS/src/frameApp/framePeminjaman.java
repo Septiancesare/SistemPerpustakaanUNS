@@ -26,7 +26,9 @@ public class framePeminjaman extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        inputNoPinjam1 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TabelPeminjaman = new javax.swing.JTable();
+        inputNoPinjam = new javax.swing.JTextField();
         inputIDPetugas = new javax.swing.JTextField();
         inputIDAnggota = new javax.swing.JTextField();
         inputNamaAnggota = new javax.swing.JTextField();
@@ -44,15 +46,50 @@ public class framePeminjaman extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        inputNoPinjam1.setBackground(new java.awt.Color(222, 217, 186));
-        inputNoPinjam1.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
-        inputNoPinjam1.setBorder(null);
-        inputNoPinjam1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                inputNoPinjam1ActionPerformed(evt);
+        TabelPeminjaman.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "No. Pinjam ", "ID Petugas", "ID Anggota", "Nama Anggota", "ID Buku", "Judul Buku", "Tanggal Pinjam", "Batas Pengembalian "
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
-        getContentPane().add(inputNoPinjam1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 390, 30));
+        TabelPeminjaman.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                TabelPeminjamanMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(TabelPeminjaman);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 467, 1300, 270));
+
+        inputNoPinjam.setBackground(new java.awt.Color(222, 217, 186));
+        inputNoPinjam.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
+        inputNoPinjam.setBorder(null);
+        inputNoPinjam.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputNoPinjamActionPerformed(evt);
+            }
+        });
+        getContentPane().add(inputNoPinjam, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 390, 30));
 
         inputIDPetugas.setBackground(new java.awt.Color(222, 217, 186));
         inputIDPetugas.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
@@ -194,9 +231,9 @@ public class framePeminjaman extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_inputIDPetugasActionPerformed
 
-    private void inputNoPinjam1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNoPinjam1ActionPerformed
+    private void inputNoPinjamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputNoPinjamActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_inputNoPinjam1ActionPerformed
+    }//GEN-LAST:event_inputNoPinjamActionPerformed
 
     private void inputIDAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDAnggotaActionPerformed
         // TODO add your handling code here:
@@ -244,6 +281,34 @@ public class framePeminjaman extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBatalActionPerformed
 
+    private void TabelPeminjamanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TabelPeminjamanMouseClicked
+        // TODO add your handling code here:
+        int row = TabelPeminjaman.getSelectedRow();
+
+        //        if (row == -1){
+            //            return;
+            //
+            //        }
+        String idPinjam = (String) TabelPeminjaman.getValueAt(row, 1);
+        inputNoPinjam.setText(idPinjam);
+
+        String idPetugas = (String) TabelPeminjaman.getValueAt(row, 6);
+        inputIDPetugas.setText(idPetugas);
+
+        String idAnggota = (String) TabelPeminjaman.getValueAt(row, 3);
+        inputIDAnggota.setText(idAnggota);
+
+        String namaAnggota = (String) TabelPeminjaman.getValueAt(row, 4);
+        inputNamaAnggota.setText(namaAnggota);
+
+        String idBuku = (String) TabelPeminjaman.getValueAt(row, 5);
+        inputIDBuku.setText(idBuku);
+
+        String judulBuku = (String) TabelPeminjaman.getValueAt(row, 9);
+        inputJudulBuku.setText(judulBuku);
+
+    }//GEN-LAST:event_TabelPeminjamanMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -280,6 +345,7 @@ public class framePeminjaman extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTable TabelPeminjaman;
     private javax.swing.JLabel bgPeminjaman;
     private javax.swing.JButton btnBatal;
     private javax.swing.JButton btnHapus;
@@ -292,7 +358,8 @@ public class framePeminjaman extends javax.swing.JFrame {
     private javax.swing.JTextField inputIDPetugas;
     private javax.swing.JTextField inputJudulBuku;
     private javax.swing.JTextField inputNamaAnggota;
-    private javax.swing.JTextField inputNoPinjam1;
+    private javax.swing.JTextField inputNoPinjam;
     private javax.swing.JTextField inputTanggalPinjam;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

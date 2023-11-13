@@ -212,7 +212,7 @@ public class framePeminjaman extends javax.swing.JFrame {
         btnBatal.setBackground(new java.awt.Color(125, 39, 34));
         btnBatal.setFont(new java.awt.Font("Century", 1, 14)); // NOI18N
         btnBatal.setForeground(new java.awt.Color(255, 204, 0));
-        btnBatal.setText("Batal");
+        btnBatal.setText("Keluar");
         btnBatal.setBorder(null);
         btnBatal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

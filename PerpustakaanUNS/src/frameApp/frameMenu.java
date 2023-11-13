@@ -44,6 +44,11 @@ public class frameMenu extends javax.swing.JFrame {
         btnDataAnggota.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         btnDataAnggota.setForeground(new java.awt.Color(125, 39, 34));
         btnDataAnggota.setText("DATA ANGGOTA");
+        btnDataAnggota.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataAnggotaActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnDataAnggota, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 300, 180));
 
         btnPeminjaman.setBackground(new java.awt.Color(251, 205, 31));
@@ -72,12 +77,22 @@ public class frameMenu extends javax.swing.JFrame {
         btnDataAdmin.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         btnDataAdmin.setForeground(new java.awt.Color(125, 39, 34));
         btnDataAdmin.setText("DATA ADMIN");
+        btnDataAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataAdminActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnDataAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 430, 300, 180));
 
         btnDataBuku.setBackground(new java.awt.Color(251, 205, 31));
         btnDataBuku.setFont(new java.awt.Font("Century", 1, 18)); // NOI18N
         btnDataBuku.setForeground(new java.awt.Color(125, 39, 34));
         btnDataBuku.setText("DATA BUKU");
+        btnDataBuku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDataBukuActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnDataBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 430, 300, 180));
 
         btnKeluar.setBackground(new java.awt.Color(251, 205, 31));
@@ -113,6 +128,9 @@ public class frameMenu extends javax.swing.JFrame {
 
     private void btnPeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPeminjamanActionPerformed
         // TODO add your handling code here:
+        framePeminjaman peminjaman = new framePeminjaman();
+        peminjaman.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_btnPeminjamanActionPerformed
 
     private void btnKeluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKeluarActionPerformed
@@ -128,6 +146,28 @@ public class frameMenu extends javax.swing.JFrame {
         pengembalian.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_btnPengembalianActionPerformed
+
+    private void btnDataAnggotaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAnggotaActionPerformed
+        // TODO add your handling code here:
+        frameAnggota anggota = new frameAnggota();
+        
+        anggota.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDataAnggotaActionPerformed
+
+    private void btnDataAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataAdminActionPerformed
+        // TODO add your handling code here:
+        frameDataAdmin admin = new frameDataAdmin();
+        admin.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDataAdminActionPerformed
+
+    private void btnDataBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDataBukuActionPerformed
+        // TODO add your handling code here:
+        frameBuku buku = new frameBuku();
+        buku.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnDataBukuActionPerformed
 
     /**
      * @param args the command line arguments

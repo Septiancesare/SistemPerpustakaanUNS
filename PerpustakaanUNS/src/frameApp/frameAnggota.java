@@ -269,7 +269,6 @@ public class frameAnggota extends javax.swing.JFrame {
 
     private void tabelAnggotaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelAnggotaMouseClicked
         // TODO add your handling code here:
-         // TODO add your handling code here:
         int row = tabelAnggota.getSelectedRow();
         
 //        if (row == -1){

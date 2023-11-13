@@ -39,7 +39,7 @@ public class frameBuku extends javax.swing.JFrame {
         btnHapus = new javax.swing.JButton();
         btnBatal = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        tabelAnggota = new javax.swing.JTable();
+        tabelBuku = new javax.swing.JTable();
         bgBuku = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -62,6 +62,11 @@ public class frameBuku extends javax.swing.JFrame {
         inputIDBuku.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputIDBuku.setForeground(new java.awt.Color(255, 204, 0));
         inputIDBuku.setBorder(null);
+        inputIDBuku.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputIDBukuActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputIDBuku, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 400, 30));
 
         inputJudulBuku.setBackground(new java.awt.Color(222, 217, 186));
@@ -90,18 +95,33 @@ public class frameBuku extends javax.swing.JFrame {
         inputPenerbit.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputPenerbit.setForeground(new java.awt.Color(255, 204, 0));
         inputPenerbit.setBorder(null);
+        inputPenerbit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputPenerbitActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputPenerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 400, 30));
 
         inputTahunTerbit.setBackground(new java.awt.Color(222, 217, 186));
         inputTahunTerbit.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputTahunTerbit.setForeground(new java.awt.Color(255, 204, 0));
         inputTahunTerbit.setBorder(null);
+        inputTahunTerbit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputTahunTerbitActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputTahunTerbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 240, 400, 30));
 
         inputRak.setBackground(new java.awt.Color(222, 217, 186));
         inputRak.setFont(new java.awt.Font("Century", 0, 14)); // NOI18N
         inputRak.setForeground(new java.awt.Color(255, 204, 0));
         inputRak.setBorder(null);
+        inputRak.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                inputRakActionPerformed(evt);
+            }
+        });
         getContentPane().add(inputRak, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 310, 400, 30));
 
         btnTambah.setBackground(new java.awt.Color(125, 39, 34));
@@ -167,9 +187,9 @@ public class frameBuku extends javax.swing.JFrame {
         jScrollPane1.setForeground(new java.awt.Color(255, 204, 0));
         jScrollPane1.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
 
-        tabelAnggota.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
-        tabelAnggota.setForeground(new java.awt.Color(255, 204, 0));
-        tabelAnggota.setModel(new javax.swing.table.DefaultTableModel(
+        tabelBuku.setFont(new java.awt.Font("Century", 0, 12)); // NOI18N
+        tabelBuku.setForeground(new java.awt.Color(255, 204, 0));
+        tabelBuku.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -180,8 +200,13 @@ public class frameBuku extends javax.swing.JFrame {
                 "ID Buku", "Judul Buku", "Penulis", "Penerbit", "Tahun Terbit", "Rak"
             }
         ));
-        tabelAnggota.setSelectionForeground(new java.awt.Color(255, 204, 0));
-        jScrollPane1.setViewportView(tabelAnggota);
+        tabelBuku.setSelectionForeground(new java.awt.Color(255, 204, 0));
+        tabelBuku.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tabelBukuMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tabelBuku);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 480, 1300, 430));
 
@@ -215,6 +240,49 @@ public class frameBuku extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnBatalActionPerformed
 
+    private void inputIDBukuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputIDBukuActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputIDBukuActionPerformed
+
+    private void inputPenerbitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputPenerbitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputPenerbitActionPerformed
+
+    private void inputTahunTerbitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputTahunTerbitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputTahunTerbitActionPerformed
+
+    private void inputRakActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_inputRakActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_inputRakActionPerformed
+
+    private void tabelBukuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tabelBukuMouseClicked
+        // TODO add your handling code here:
+        int row = tabelBuku.getSelectedRow();
+        
+//        if (row == -1){
+//            return;
+//        
+//        }
+        String idBuku = (String) tabelBuku.getValueAt(row, 1);
+        inputIDBuku.setText(idBuku);
+        
+        String judulBuku = (String) tabelBuku.getValueAt(row, 2);
+        inputJudulBuku.setText(judulBuku);
+        
+        String penulis = (String) tabelBuku.getValueAt(row, 3);
+        inputPenulis.setText(penulis);
+        
+        String penerbit = (String) tabelBuku.getValueAt(row, 4);
+        inputPenerbit.setText(penerbit);
+        
+        String tahunTerbit = (String) tabelBuku.getValueAt(row, 5);
+        inputTahunTerbit.setText(tahunTerbit);
+        
+        String rak = (String) tabelBuku.getValueAt(row, 6);
+        inputRak.setText(rak);
+    }//GEN-LAST:event_tabelBukuMouseClicked
+    
     /**
      * @param args the command line arguments
      */
@@ -265,6 +333,6 @@ public class frameBuku extends javax.swing.JFrame {
     private javax.swing.JTextField inputTahunTerbit;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tabelAnggota;
+    private javax.swing.JTable tabelBuku;
     // End of variables declaration//GEN-END:variables
 }
